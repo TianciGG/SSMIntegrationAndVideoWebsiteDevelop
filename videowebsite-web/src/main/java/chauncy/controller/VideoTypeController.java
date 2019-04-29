@@ -2,6 +2,7 @@ package chauncy.controller;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import chauncy.service.VideoTypeServive;
 @Controller
 @RequestMapping("/VideoTypeController")
 public class VideoTypeController {
+	private static Logger logger = Logger.getLogger(VideoTypeController.class);
 	
 	private static final String TEST="test";
 	
@@ -36,7 +38,9 @@ public class VideoTypeController {
 	public List<VideoType> getVideoTypeList(){
 		List<VideoType> videoTypes = videoTypeService.getVideoTypes(null);
 		for (VideoType videoType : videoTypes) {
-			System.out.println(videoType.toString());
+			//System.out.println(videoType.toString());
+			//生产不建议使用info级别的日志打印，因为日志冗余不太好。
+			logger.info(videoType.toString());
 		}
 		return videoTypes;
 	}

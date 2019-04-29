@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 配置分页插件 -->
+	<plugins>
+	    <!-- interceptor的取值，在4.2版本以前：com.github.pagehelper.PageHelper，4.2版本以后，因为改变了实现，取值为：com.github.pagehelper.PageInterceptor -->
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库，PageHelper4.0版本后会自动识别，不用进行配置-->
+			<!-- <property name="dialect" value="mysql" /> -->
+		</plugin>
+	</plugins>
+</configuration>

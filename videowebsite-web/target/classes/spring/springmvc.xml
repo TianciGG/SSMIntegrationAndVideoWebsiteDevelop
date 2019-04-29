@@ -16,4 +16,11 @@
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
+    
+    <!-- 设置允许静态资源访问 -->
+    <mvc:resources mapping="/static/imgs/**" location="static/imgs/" />
+    <mvc:resources mapping="/static/easyui/**" location="static/easyui/" />
+    <mvc:resources mapping="/static/js/**" location="static/js/" />
+    <mvc:resources mapping="/static/css/**" location="static/css/" />
+    
 </beans>

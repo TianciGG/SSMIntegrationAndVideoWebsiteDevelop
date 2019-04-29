@@ -17,5 +17,5 @@ public interface VideoInfoMapper {
 
 	int updateByPrimaryKey(VideoInfo record);
 
-	List<VideoInfo> selectAll();
+	List<VideoInfo> selectAll(VideoInfo record);
 }
