@@ -9,7 +9,7 @@
 </head>
 <body>
     <center>
-        <h1>蚂蚁视频后台添加视频资源</h1>
+        <h1>后台添加视频资源</h1>
         <form action="addVideo" style="font-size: 14px;" method="post"
             ENCTYPE="multipart/form-data">
             <table>
