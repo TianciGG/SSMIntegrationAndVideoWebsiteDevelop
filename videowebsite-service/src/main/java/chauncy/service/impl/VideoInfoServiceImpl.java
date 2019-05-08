@@ -19,4 +19,14 @@ public class VideoInfoServiceImpl implements VideoInfoService {
 	public List<VideoInfo> getVideoInfos(VideoInfo videoInfo){
 		return videoInfoMapper.selectAll(videoInfo);
 	}
+
+	@Override
+	public VideoInfo getVideoInfo(int id) {
+		return videoInfoMapper.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public int addVideo(VideoInfo videoInfo) { 
+		return videoInfoMapper.insert(videoInfo);
+	}
 }

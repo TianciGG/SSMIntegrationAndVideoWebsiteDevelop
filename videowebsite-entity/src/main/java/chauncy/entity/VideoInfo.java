@@ -73,6 +73,13 @@ public class VideoInfo {
 	
 		this.typeName = typeName;
 	}
+
+	@Override
+	public String toString() {
+		return "VideoInfo [id=" + id + ", videoName=" + videoName + ", videoUrl=" + videoUrl + ", videoHtml="
+				+ videoHtml + ", videoTypeId=" + videoTypeId + ", videoDel=" + videoDel + ", typeName=" + typeName
+				+ "]";
+	}
     
     
     

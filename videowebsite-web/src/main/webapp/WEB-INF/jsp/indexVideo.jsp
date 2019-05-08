@@ -10,7 +10,7 @@
 <body>
 	<center>
 		<h1>视频网站后台管理系统</h1>
-		<a href="locaAddVideo">添加资源</a>
+		<a href="jumpToAddVideoPage">添加资源</a>
 		<table style="BORDER-COLLAPSE: collapse; text-align: center;"
 			borderColor=#000000 height=40 cellPadding=1 width="70%"
 			align="center" border=1>
@@ -29,15 +29,19 @@
 							src="/static/imgs/${p.videoUrl}"></td>
 						<td>${p.videoName}</td>
 						<td>${p.typeName}</td>
-						<td><a href="videoDetails?id=${p.id}"
+						<td><a href="getVideo?id=${p.id}"
 							style='text-decoration: none;'>预览视频</a></td>
 					</tr>
 				</c:forEach>
-
+                
 
 			</tbody>
 		</table>
-
+		<a style="font-size: 20px;" href="indexVideo?pageIndex=1">首页</a>
+        <c:forEach begin="1" end="${pages}" var="p">
+            <a style="font-size: 20px;" href="indexVideo?pageIndex=${p}">${p}</a>
+        </c:forEach>
+        <a style="font-size: 20px;" href="indexVideo?pageIndex=${pages}">尾页</a>
 	</center>
 </body>
 </html>
